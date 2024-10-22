@@ -31,21 +31,7 @@ const Nature: React.FC = () => {
     "./textures/nature/Willow_5.fbx",
     "./textures/nature/WoodLog_Moss.fbx",
   ]);
-    // const tree = useLoader(GLTFLoader, "./textures/nature/tree.glb");
-    // const [
-    //   grass2,
-    //   grass,
-    //   rock1,
-    //   rock5,
-    //   log,
-    // ] = useLoader(FBXLoader, [
-    //   "./textures/nature/Grass_2.fbx",
-    //   "./textures/nature/Grass.fbx",
-    //   "./textures/nature/Rock_1.fbx",
-    //   "./textures/nature/Rock_5.fbx",
-    //   "./textures/nature/WoodLog_Moss.fbx",
-    // ]);
-
+  
   birch3.scale.setScalar(0.4);
   birch3.traverse((o: any) => {
     o.castShadow = true;
