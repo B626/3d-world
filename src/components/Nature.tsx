@@ -2,6 +2,8 @@ import { useLoader } from "@react-three/fiber";
 import React, { useEffect, useMemo } from "react";
 import * as THREE from "three";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+
 
 const Nature: React.FC = () => {
   const [
@@ -31,7 +33,8 @@ const Nature: React.FC = () => {
     "./textures/nature/Willow_5.fbx",
     "./textures/nature/WoodLog_Moss.fbx",
   ]);
-  
+  const tree = useLoader(GLTFLoader, './textures/nature/tree.glb')
+
   birch3.scale.setScalar(0.4);
   birch3.traverse((o: any) => {
     o.castShadow = true;
