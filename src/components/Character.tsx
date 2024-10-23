@@ -43,7 +43,7 @@ const Character: React.FC<CharacterProps> = ({ camera }) => {
   const velocity = new THREE.Vector3(0, 0, 0);
 
   // const c = useLoader(FBXLoader, "./character/character_mann.fbx");
-  const c = useLoader(FBXLoader, "./character/character_binary.fbx");
+  const c = useLoader(FBXLoader, "./character/adam.fbx");
 
   c.scale.setScalar(0.1);
   c.traverse((f) => {
@@ -54,21 +54,21 @@ const Character: React.FC<CharacterProps> = ({ camera }) => {
   const mixer = new THREE.AnimationMixer(c);
 
   // const idle = useFBX("./character/idle.fbx");
-  const idle = useFBX("./character/idle_7.fbx");
+  const idle = useFBX("./character/idle_adam.fbx");
 
   animations["idle"] = {
     clip: mixer.clipAction(idle.animations[0]),
   };
 
   // const walk = useFBX("./character/walking.fbx");
-  const walk = useFBX("./character/walking_fixed.fbx");
+  const walk = useFBX("./character/walking_adam.fbx");
 
   animations["walk"] = {
     clip: mixer.clipAction(walk.animations[0]),
   };
 
   // const run = useFBX("./character/running.fbx");
-  const run = useFBX("./character/running_fixed.fbx");
+  const run = useFBX("./character/running_adam.fbx");
 
   animations["run"] = {
     clip: mixer.clipAction(run.animations[0]),
